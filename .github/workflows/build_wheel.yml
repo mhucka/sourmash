@@ -47,7 +47,7 @@ jobs:
             macos_target: 'MACOSX_DEPLOYMENT_TARGET=10.11'
           - build: macos-arm64
             os: macos-10.15
-            arch: auto64
+            arch: arm64 universal2
             macos_target: 'MACOSX_DEPLOYMENT_TARGET=10.15'
           - build: windows-x86_64
             os: windows-2019
