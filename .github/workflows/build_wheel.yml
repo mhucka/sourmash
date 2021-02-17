@@ -86,7 +86,6 @@ jobs:
           CIBW_ARCHS: ${{ matrix.arch }}
         run: |
           python -m cibuildwheel --output-dir dist
-          ls -lR ./dist
 
       - uses: actions/upload-artifact@v2
         with:
