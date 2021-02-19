@@ -47,7 +47,7 @@ jobs:
             macos_target: 'MACOSX_DEPLOYMENT_TARGET=10.11'
           - build: macos-arm64
             os: macos-10.15
-            arch: arm64 universal2
+            arch: arm64
             macos_target: 'MACOSX_DEPLOYMENT_TARGET=10.15'
           - build: windows-x86_64
             os: windows-2019
@@ -80,7 +80,7 @@ jobs:
           CIBW_BEFORE_ALL_LINUX: 'source .ci/install_cargo.sh'
           CIBW_ENVIRONMENT_LINUX: 'PATH="$HOME/.cargo/bin:$PATH"'
           CIBW_ENVIRONMENT_MACOS: ${{ matrix.macos_target }}
-          CIBW_BUILD_VERBOSITY: 3
+          CIBW_BUILD_VERBOSITY: 1
           CIBW_ARCHS: ${{ matrix.arch }}
 
       - uses: actions/upload-artifact@v2
